@@ -24,6 +24,7 @@ Add ``image_diet`` to ``INSTALLED_APPS`` setting::
     )
 
 Check which tools are already installed by executing:
+
     ``python manage.py check_diet_tools``
 
 Install those reported missing or disable them as described by command's
@@ -63,6 +64,7 @@ to trigger shrinking from your code (or let me know which public app you are
 using so I can add support for it).
 
 To do this import:
+
     ``from image_diet import squeeze``
 
 And call ``squeeze(path_to_image)`` where ``path_to_image`` is an absolute
