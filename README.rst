@@ -7,8 +7,11 @@ files.  It optimizes images without changing their look or visual quality
 ("losslessly").
 
 It works on images in JPEG, GIF and PNG formats and will leave others
-unchanged. Provides a seemless integration with easy_thumbnails app, but can
+unchanged. Provides a seemless integration with easy-thumbnails app, but can
 work with others too.
+
+App was written and is being maintained by Marko Samastur (markos@gaivo.net)
+and is licensed under MIT license.
 
 
 Installation
@@ -27,7 +30,7 @@ Install those reported missing or disable them as described by command's
 output (or ``Usage`` section). ``requirements.txt`` lists all tools together
 with their home addresses.
 
-If you are using recent version of easy_thumbnails, then you're done.
+If you are using recent version of easy-thumbnails, then you're done.
 'image-diet' will automatically squeeze unnecessary bytes every time
 a thumbnail is created.
 
@@ -36,7 +39,38 @@ If you aren't, then read further.
 
 Usage
 =====
-TBD.
+``image-diet`` is used to remove unnecessary bytes from images. This means
+every byte that will not change final display of the image including meta
+information stored in EXIF etc. *DO NOT* use this app if this is not
+acceptable.
+
+Primary motivation for its development was seemless optimization of images
+created by ``easy-thumbnails``. PIL is in many ways a great library, but its
+output tends to be verbose.
+
+If you are using a recent version of ``easy-thumbnails``, then you shouldn't
+need to do anything more than described in ``Installation``. It is important
+to disable tools that are not available since app for efficiency reasons
+doesn't check during runtime.
+
+You may use ``manage.py check_diet_tools`` action any time to check current
+status of external utilities. Action also provides copy&paste ready list of
+configuration options for disabling those that could not be found.
+
+You may still be able to use ``image-diet`` even if you are not using
+``easy-thumbnails``. Installation procedure is the same, but you will need
+to trigger shrinking from your code (or let me know which public app you are
+using so I can add support for it).
+
+To do this import:
+    ``from image_diet import squeeze``
+
+And call ``squeeze(path_to_image)`` where ``path_to_image`` is an absolute
+path to image you want to optimize. Function returns ``None`` if there was a
+problem or path to squeezed image if it was successful.
+
+Returned path is currently always the same as the one provided, but this may
+change in the future (when GIF to PNG8 transformation gets added).
 
 
 Configuration options
