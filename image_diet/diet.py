@@ -1,4 +1,5 @@
 import logging
+from os.path import isfile
 from subprocess import call, PIPE
 from imghdr import what as determinetype
 import image_diet.settings as settings
@@ -41,6 +42,11 @@ def squeeze_png():
 
 
 def squeeze(path):
+    '''Returns path of optimized image or None if something went wrong.'''
+    if not isfile(path):
+        logger.error("'%s' does not point to a file." % path)
+        return None
+
     if settings.DIET_DEBUG:  # Create a copy of original file for debugging purposes
         call("cp '%(file)s' '%(file)s'.orig" % {'file': path},
              shell=True, stdout=PIPE)
