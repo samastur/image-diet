@@ -74,6 +74,12 @@ problem or path to squeezed image if it was successful.
 Returned path is currently always the same as the one provided, but this may
 change in the future (when GIF to PNG8 transformation gets added).
 
+If you installed ``image-diet`` after you already processed some images, then
+you can shrink them with ``manage.py diet_images`` command. Just pass paths
+to directories you want to scan for images as command's argumentand it will
+process all images that can be found in those directories or their
+subdirectories.
+
 
 Configuration options
 ---------------------
