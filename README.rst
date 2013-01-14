@@ -92,8 +92,6 @@ TODO/Wishlist
 =============
 - add extreme compressions (change to b&w, reduce color depth,
   change GIF to PNG8)
-- add a Django management command for dieting images from chosen
-  directory
 - stop depending on tools that processed image will actually be smaller
 - add integrations for other image handling Django apps
 
