@@ -43,7 +43,7 @@ Usage
 ``image-diet`` is used to remove unnecessary bytes from images. This means
 every byte that will not change final display of the image including meta
 information stored in EXIF etc. *DO NOT* use this app if this is not
-acceptable.
+acceptable or if your image storage is not a local file system.
 
 Primary motivation for its development was seemless optimization of images
 created by ``easy-thumbnails``. PIL is in many ways a great library, but its
@@ -98,6 +98,7 @@ TODO/Wishlist
 =============
 - add extreme compressions (change to b&w, reduce color depth,
   change GIF to PNG8)
+- add support for storage other than local file system
 - stop depending on tools that processed image will actually be smaller
 - add integrations for other image handling Django apps
 
