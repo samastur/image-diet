@@ -1,16 +1,38 @@
 External tools used for image shrinking.
 
 JPEG:
-- jpegtran (http://jpegclub.org/jpegtran/; included in libjpeg-progs package
+* jpegtran (http://jpegclub.org/jpegtran/; included in libjpeg-progs package
   on Ubuntu)
-- Jpegoptim (http://www.kokkonen.net/tjko/projects.html)
+* Jpegoptim (http://www.kokkonen.net/tjko/projects.html)
 
 GIF (used only for optimizing animated GIFs):
-- Gifsicle (http://www.lcdf.org/gifsicle/)
+* Gifsicle (http://www.lcdf.org/gifsicle/)
 
 PNG:
-- OptiPNG (http://optipng.sourceforge.net/)
-- AdvanceCOMP PNG (http://advancemame.sourceforge.net/doc-advpng.html)
-- Pngcrush (http://pmt.sourceforge.net/pngcrush/)
+* OptiPNG (http://optipng.sourceforge.net/)
+* AdvanceCOMP PNG (http://advancemame.sourceforge.net/doc-advpng.html)
+* Pngcrush (http://pmt.sourceforge.net/pngcrush/)
 
-Ubuntu contains packages for all of them. Use brew on Mac.
+Ubuntu packages are:
+* libjpeg-progs
+* jpegoptim
+* gifsicle
+* optipng
+* advancecomp
+* pngcrush
+
+CentOS packages are:
+* jpegtran: libjpeg
+* jpegoptim: can't find rpm on internet
+* gifsicle: gifsicle package on repoforge
+* optipng: optipng package in EPEL
+* advancecomp: advancecomp package on repoforge
+* pngcrush: pngcrush package on repoforge
+
+Brew for MacOSX:
+* jpeg
+* jpegoptim
+* gifsicle
+* optipng
+* advancecomp
+* pngcrush
