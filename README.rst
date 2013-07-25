@@ -29,7 +29,7 @@ Check which tools are already installed by executing:
 
 Install those reported missing or disable them as described by command's
 output (or ``Usage`` section). ``requirements.txt`` lists all tools together
-with their home addresses.
+with their home addresses and tips for installation.
 
 If you are using recent version of easy-thumbnails, then you're done.
 'image-diet' will automatically squeeze unnecessary bytes every time

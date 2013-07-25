@@ -36,3 +36,14 @@ Brew for MacOSX:
 * optipng
 * advancecomp
 * pngcrush
+
+Alternative on MacOSX:
+Install imageoptim (http://imageoptim.com) and then symlink from /usr/bin/
+to all the required packages:
+sudo ln -s /Applications/ImageOptim.app/Contents/MacOS/advpng
+sudo ln -s /Applications/ImageOptim.app/Contents/MacOS/gifsicle
+sudo ln -s /Applications/ImageOptim.app/Contents/MacOS/jpegoptim
+sudo ln -s /Applications/ImageOptim.app/Contents/MacOS/jpegtran
+sudo ln -s /Applications/ImageOptim.app/Contents/MacOS/optipng
+sudo ln -s /Applications/ImageOptim.app/Contents/MacOS/pngcrush
+
