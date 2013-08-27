@@ -22,7 +22,7 @@ def squeeze_gif():
     '''Gifsicle only optimizes animations.
 
     Eventually add support to change gifs to png8.'''
-    return (u"gifsicle -O2 b'%(file)s' > '%(file)s'.diet "
+    return (u"gifsicle -O2 '%(file)s' > '%(file)s'.diet "
             "&& mv '%(file)s.diet' '%(file)s'") if settings.DIET_GIFSICLE else ""
 
 
