@@ -1,5 +1,5 @@
 from django.dispatch import receiver
-from diet import squeeze
+from image_diet.diet import squeeze
 
 try:
     from easy_thumbnails.signals import saved_file, thumbnail_created
