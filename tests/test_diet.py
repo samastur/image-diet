@@ -75,7 +75,7 @@ class DietTest(TestCase):
         diet.settings.DIET_GIFSICLE = True
         self.assertEqual(
             diet.squeeze_gif(),
-            (u"gifsicle -O2 b'%(file)s' > '%(file)s'.diet "
+            (u"gifsicle -O2 '%(file)s' > '%(file)s'.diet "
                 "&& mv '%(file)s.diet' '%(file)s'")
         )
 
