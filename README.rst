@@ -13,6 +13,9 @@ work with others too.
 App was written and is being maintained by Marko Samastur (markos@gaivo.net)
 and is licensed under MIT license.
 
+**WARNING: Development of this app has stopped and moved to backwards 
+incompatible `image-diet2 <https://github.com/samastur/image-diet2>`_**
+
 
 Installation
 ============
